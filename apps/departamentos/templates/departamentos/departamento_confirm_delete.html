@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<form method="post">
+    {% csrf_token %}
+    <p> Você tem certeza que deseja apagar o departamento "{{ object }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+
+{% endblock  %}

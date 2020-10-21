@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<form method="post" >
+
+    {% csrf_token  %}
+
+    {% load bootstrap %}
+
+    {{ form|bootstrap }}
+
+    <button type="submit"> Salvar </button>
+
+</form>
+
+<br>
+
+<a href="{%  url  'create_documento' object.id %}"
+>Enviar Documento </a>
+
+{% endblock  %}

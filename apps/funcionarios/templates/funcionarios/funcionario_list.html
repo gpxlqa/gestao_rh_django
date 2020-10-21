@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+ {% if not object_list %}
+    Não existem registros
+ {% endif %}
+
+     {% for funcionario in object_list %}
+
+        <a href=" {% url 'update_funcionario' funcionario.id  %}  " >
+            {{ funcionario }}
+        </a>
+
+         <a href=" {% url 'delete_funcionario' funcionario.id  %}  " >Apagar</a>
+        <br>
+
+    {% endfor %}
+
+
+<a href=" {% url 'create_funcionario' %} " class = "btn btn-info"> Novo Funcionario </a>
+
+
+{% endblock  %}

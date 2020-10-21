@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <h1>Você está certo que deseja apagar? </h1>
+<form method="post">
+
+    {% csrf_token  %}
+
+
+
+    {{ form }}
+
+    <button type="submit"> Confirmar </button>
+
+</form>
+
+{% endblock  %}
